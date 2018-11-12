@@ -45,7 +45,10 @@ RUN ARCH= && dpkgArch="$(dpkg --print-architecture)" \
 
 COPY Gemfile /app/Gemfile
 COPY Gemfile.lock /app/Gemfile.lock
+COPY package.json /app/package.json
+COPY package-lock.json /app/package-lock.json
 
 RUN bundle install
+RUN npm install
 
 COPY . /app

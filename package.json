@@ -1,5 +1,6 @@
 {
   "name": "hamilton38-credcon",
+  "scripts": {},
   "dependencies": {},
   "devDependencies": {
     "webpack": "^4.25.1",
