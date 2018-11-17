@@ -1,0 +1,18 @@
+{
+ "manifest_version": 2,
+ "name": "Hamilton 68",
+ "description": "Check whether the article you're reading is being promoted by pro-Russian accounts",
+ "version": "1",
+ "author": "Andrew Gibson",
+ "browser_action": {
+  "default_title": "Hamilton 68"
+ },
+ "content_scripts": [
+  {
+    "matches": ["https://*/*", "http://*/*"],
+    "js": ["content.js"],
+    "run_at": "document_end"
+  }
+],
+ "permissions": ["activeTab", "tabs"]
+}
