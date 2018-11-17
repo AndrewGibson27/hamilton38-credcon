@@ -1,5 +1,4 @@
 const ENDPOINT = 'http://localhost:3000/api?url=foo';
-const DELAY = 1000;
 const BOX = `
   <aside class="hamilton-68">
     <p class="hamilton-68__para">
