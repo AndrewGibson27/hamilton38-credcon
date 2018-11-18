@@ -13,7 +13,7 @@ class ApiController < ApplicationController
   private
 
   def resource
-    @resource ||= Resource.find_by(path: api_params[:url])
+    @resource ||= Resource.where(path: api_params[:url]).last
   end
 
   def status
