@@ -44,7 +44,7 @@ function getBoxContent(num) {
   const box = `
     <aside class="hamilton-68">
       <p class="hamilton-68__para">
-        The article you're reading has been linked to Russian propaganda efforts ${num} times in the past 48 hours.
+        The article you're reading has been mentioned in Russian propaganda efforts ${num} times in the past 48 hours.
       </p>
       <p class="hamilton-68__para">
         Learn more by visiting the <a href="https://dashboard.securingdemocracy.org/">Hamilton 68</a> dashboard.
@@ -64,7 +64,7 @@ async function checkUrl() {
   const url = window.location.href;
   
   try {
-    const result = await fetch(`${ENDPOINT}?url=foo`);
+    const result = await fetch(`${ENDPOINT}?url=${url}`);
     const { status } = result;
     
     if (status === 404) {
