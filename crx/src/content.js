@@ -15,7 +15,7 @@ const STYLES = `
   .hamilton-68__para {
     color: #fff !important;
     font-family: sans-serif !important;
-    font-size: 1.1rem !important;
+    font-size: 16px !important;
     line-height: 1.5 !important;
   }
 
