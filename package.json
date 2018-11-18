@@ -1,7 +1,11 @@
 {
-  "name": "hamilton38-credcon",
-  "scripts": {},
-  "dependencies": {},
+  "name": "hamilton68-credcon",
+  "scripts": {
+    "crx": "crx pack crx/src -p crx/key.pem -o crx/build/hamilton68.crx"
+  },
+  "dependencies": {
+    "crx": "^3.2.1"
+  },
   "devDependencies": {
     "webpack": "^4.25.1",
     "webpack-cli": "^3.1.2"
