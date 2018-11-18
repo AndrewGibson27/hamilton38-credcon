@@ -6,7 +6,8 @@ class ApiController < ApplicationController
       url: api_params[:url]
     }
     response.merge!(serialized_resource) if serialized_resource
-    render json: response
+
+    render json: response, status: status
   end
 
   private
