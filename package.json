@@ -1,5 +1,19 @@
 {
   "name": "hamilton68-credcon",
+  "version": "0.1.0",
+  "description": "Check whether an article you're reading is linked to Russian propaganda efforts, as determined by the Hamilton 68 dashboard.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AndrewGibson27/hamilton68-credcon"
+  },
+  "bugs": {
+    "url": "https://github.com/AndrewGibson27/hamilton68-credcon/issues/"
+  },
+  "authors": [
+    "Scott Hudson (https://github.com/scottwhudson)",
+    "Andrew Gibson (https://github.com/andrewgibson27)"
+  ],
   "scripts": {
     "crx": "crx pack crx/src -p crx/key.pem -o crx/build/hamilton68.crx"
   },
