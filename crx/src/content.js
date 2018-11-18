@@ -44,7 +44,7 @@ function getBoxContent(num) {
   const box = `
     <aside class="hamilton-68">
       <p class="hamilton-68__para">
-        The article you're reading has been linked to Russian propaganda efforts ${num} times in the past hour.
+        The article you're reading has been linked to Russian propaganda efforts ${num} times in the past 48 hours.
       </p>
       <p class="hamilton-68__para">
         Learn more by visiting the <a href="https://dashboard.securingdemocracy.org/">Hamilton 68</a> dashboard.
