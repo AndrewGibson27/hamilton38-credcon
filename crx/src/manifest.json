@@ -1,7 +1,7 @@
 {
  "manifest_version": 2,
  "name": "Hamilton 68",
- "description": "Check whether an article you're reading is linked to Russian propaganda efforts, as determined by the Hamilton 68 dashboard.",
+ "description": "Check whether an article you're reading is potentially linked to Russian propaganda efforts, as determined by the Hamilton 68 dashboard.",
  "version": "1",
  "author": "Andrew Gibson",
  "browser_action": {
