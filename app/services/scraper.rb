@@ -29,7 +29,7 @@ class Scraper
         r.path = url["name"]
         r.mentions = url["value"]
         r.subtype = :url
-        r.trending = false
+        r.trending = true
       end
     end
   end
