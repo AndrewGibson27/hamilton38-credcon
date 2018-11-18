@@ -44,7 +44,7 @@ function getBoxContent(num) {
   const box = `
     <aside class="hamilton-68">
       <p class="hamilton-68__para">
-        The article you're reading has been mentioned in Russian propaganda efforts ${num} times in the past 48 hours.
+        This article has been mentioned ${num} times in connection with potential Russian influence operations in the past 48 hours.
       </p>
       <p class="hamilton-68__para">
         Learn more by visiting the <a href="https://dashboard.securingdemocracy.org/">Hamilton 68</a> dashboard.
@@ -67,11 +67,21 @@ async function checkUrl() {
     const result = await fetch(`${ENDPOINT}?url=${url}`);
     const { status } = result;
     
-    if (status === 404) {
+    if (status === 200) {
       const json = await result.json();
-      const { num } = json;
-      buildStyles();
-      buildBox(num || 100);
+      const {
+        data: {
+          attributes: {
+            mentions,
+            trending
+          }
+        }
+      } = json;
+      
+      if (!trending) {
+        buildStyles();
+        buildBox(mentions);
+      }
     }
   } catch (err) {
     console.error(`Something went wrong: ${err.message}`);
