@@ -1,7 +1,7 @@
 {
   "name": "hamilton68-credcon",
   "version": "0.1.0",
-  "description": "Check whether an article you're reading is linked to Russian propaganda efforts, as determined by the Hamilton 68 dashboard.",
+  "description": "Check whether an article is potentially linked to Russian influence efforts, as determined by the Hamilton 68 dashboard.",
   "license": "MIT",
   "repository": {
     "type": "git",
