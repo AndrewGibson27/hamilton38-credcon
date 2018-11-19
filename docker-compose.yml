@@ -2,15 +2,18 @@ version: '3'
 services:
   db:
     image: postgres
+    networks:
+      - foo
     volumes:
       - ./tmp/db:/var/lib/postgresql/data
+
   web:
     tty: true
     stdin_open: true
     build: .
+    networks:
+      - foo
     command: bundle exec rails s -p 3000 -b '0.0.0.0'
-    security_opt:
-      - seccomp:unconfined
     volumes:
       - .:/app
     ports:
@@ -18,6 +21,23 @@ services:
     depends_on:
       - db
       - redis
+
+  sidekiq:
+    build: .
+    networks:
+      - foo
+    depends_on:
+      - db
+      - redis
+    command: bundle exec sidekiq
+
   redis:
     image: redis
     command: redis-server
+    networks:
+      - foo
+    ports:
+      - "6379"
+
+networks:
+  foo:
