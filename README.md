@@ -1,11 +1,11 @@
-## Getting up and running
-Ensure you have Docker installed on your machine, then run `docker-compose build` to build the image.
+# Hamilton 68 Chrome Extension
+This project was created during the 2018 [CredCon](https://www.credcon.org/) hackathon. It's a Chrome extension that detects whether an article is potentially linked to Russian influence efforts, as determined by the [Hamilton 68 dashboard](https://dashboard.securingdemocracy.org/).
 
-Once built:
-1. Start the app: `docker-compose up`
-2. In a different terminal window, create the database: `docker-compose run web rake db:create`
-3. Visit `http://localhost:3000/`
+## Where stuff lives
++ `crx/src/`: Chrome extension source files
 
-To work inside the container: `docker-compose run web bash`
+## Commands
++ `npm run crx`: Pack Chrome extension
 
-Based on these official [Docker instructions](https://docs.docker.com/compose/rails/).
+## License
+MIT
